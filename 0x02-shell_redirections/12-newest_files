@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Use 'ls' to list files, sort them by modification time (newest first), and limit to 10 entries
+ls -lt | awk 'NR<=10 {print $9}

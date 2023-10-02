@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Initialize the count to 0
+count=0
+
+# Loop through the contents of the current directory
+for item in $(ls -A); do
+    # Check if the item is a directory and not "." or ".."
+    if [ -d "$item" ] && [ "$item" != "." ] && [ "$item" != ".." ]; then
+        count=$((count+1))
+    fi
+done
+
+# Print the count of directories
+echo "$count"
